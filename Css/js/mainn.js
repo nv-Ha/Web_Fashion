@@ -7,12 +7,12 @@ const modalSignUp = document.querySelector('.modal-item-signUp');
 const switchSignInButton = document.querySelector('.switch-btn-signin');
 const switchSignUpButton = document.querySelector('.switch-btn-signup');
 
-// Hiển thị modal Sign Up khi nhấn nút Sign Up
-signUpButton.addEventListener('click', () => {
-    modal.style.display = 'block';
-    modalSignIn.style.display = 'none';
-    modalSignUp.style.display = 'block';
-});
+// // Hiển thị modal Sign Up khi nhấn nút Sign Up
+// signUpButton.addEventListener('click', () => {
+//     modal.style.display = 'block';
+//     modalSignIn.style.display = 'none';
+//     modalSignUp.style.display = 'block';
+// });
 
 // Hiển thị modal Sign In khi nhấn nút Sign In
 signInButton.addEventListener('click', () => {
@@ -56,11 +56,38 @@ modal.addEventListener('click', (event) => {
 // Hiển thị modal ban đầu là ẩn
 modal.style.display = 'none';
 
+// ---slide
+var slideIndex = 0; // Bắt đầu với slideIndex = 0
+showDivs(slideIndex);
 
-// // ------------BELL
-// const NotifiBell = document.querySelector('.notifi-show');
-// const NotifiShow = document.querySelector('.notifi');
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
 
-// NotifiBell.addEventListener('click',() => {
-//     NotifiShow.style.display = 'block';
-// })
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("interface-img");
+  if (n >= x.length) {slideIndex = 0}
+  if (n < 0) {slideIndex = x.length - 1}
+  
+  for (i = 0; i < x.length; i++) {
+    x[i].classList.remove("active"); // Loại bỏ class "active" từ tất cả các ảnh
+  }
+  
+  x[slideIndex].classList.add("active"); // Thêm class "active" vào ảnh hiện tại
+}
+
+// Tự động chuyển slide sau một khoảng thời gian
+function autoSlide() {
+  plusDivs(1);
+  setTimeout(autoSlide, 3000); // 2000 milliseconds (2 seconds) per slide
+}
+
+// Gọi hàm autoSlide để bắt đầu tự động chuyển động
+autoSlide();
+  
+  
+  
+  
+  
+  

@@ -1,21 +1,43 @@
 .header{
-    height: 50px;
-    background-color: black;
+    margin-top: 0;
 }
 /* --Head-1  */
+.slogan{
+    height: 35px;
+    background-color: #383838;
+    display: flex;
+}
+.slogan>p{
+    color: rgba(255, 255, 255, 0.85);
+    margin: auto;
+    font-size: 15px;
+}
+
 .navgation{
     display: flex;
     justify-content: space-between;
+}
+
+.img-logo{
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+
+}
+.logo{
+    width: 80px;
+    margin:20px auto 0 auto;   
 }
 
 .navText{
     list-style: none;
     padding-left: 0;
     position: relative;
+    margin-top: 50px;
 }
 
 .navText-head{
-    color: rgb(222, 216, 216);
+    color: rgb(0, 0, 0);
     display: inline-block;
     margin: 0 0 0 10px;
 }
@@ -41,56 +63,59 @@
 }
 /* --Head-2  */
 .navBar{
-    margin-top: -17px;
     background-color: rgb(255, 255, 255);
-    height: 120px;
+    height: 50px;
+    position: relative;
+    margin-top: 0px;
 }
 
 .navList{
+    /* margin-left: 230px; */
     display: flex;
-    margin-left: 230px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
+    padding: 0;
+}
+
+.navList-style{
+    display: flex;
 }
 
 .navList-item{
     list-style: none;
-    padding: 20px;
-    line-height: 70px;
+    padding: 0 30px 0 0;
+    line-height: 10px;
+    color: var(--text-color);
 }
 
 .navList-item:hover{
     color: black;
     font-weight: 600;
-    transition: 0.2s ease;
-}
-
-.img-logo{
-    width: 120px;
-    position: absolute;
-    float: left;
-}
-
-.fa-bell{
-    margin-left: 40px;
-}
-.fa-magnifying-glass{
-    margin-right: -40px;
+    transition: 0.15s ease;
 }
 
 .fa-bag-shopping, 
 .fa-bell,
+.fa-user,
 .fa-magnifying-glass {
     float: right;
     font-size: 20px;
-    padding:20px;
+    padding:0 12px;
+    color: var(--icon-color);
+}
+
+.fa-bag-shopping:hover, 
+.fa-bell:hover,
+.fa-user:hover,
+.fa-magnifying-glass:hover{
+    color: var(--main-color);
 }
 /* ---Store */
 .fa-chevron-down{
     font-size: 14px;
     padding: 0 0 0 40px;
     margin-left: -40px;
+    transition: 0.25s ease;
 }
 .store-more{
      position: absolute;
@@ -102,6 +127,7 @@
      animation: Store-showMore ease 0.25s;
      display: none;
      will-change: transform;
+     border-radius: 5px;
 }
 
 @keyframes Store-showMore {
@@ -138,7 +164,7 @@
     border: 20px solid;
     right: 5px;
     top: -40px;
-    border-color: transparent transparent rgb(0, 0, 0) transparent;
+    border-color: transparent transparent var(--icon-color) transparent;
 }
 
 .store-more::after{
@@ -159,13 +185,14 @@
     position: absolute; 
     width: 350px;
     background-color: blanchedalmond;
-    right: 456px;
-    top:15%;
+    margin-left: -315px;
+    margin-top: 32px;
     border: 1px solid rgb(0, 0, 0);
     animation: Notifi-show ease 0.25s;
     transform-origin: calc(100% - 10px) top;
     display: none;
     will-change: transform;
+    border-radius: 5px;
 } 
 
 .notifi-show:hover .notifi{
@@ -185,7 +212,7 @@
     content: "";
     position: absolute;
     border: 20px solid;
-    border-color: transparent transparent rgb(0, 0, 0) transparent;
+    border-color: transparent transparent var(--icon-color) transparent;
     right: 5px;
     top: -40px;
 }
@@ -203,6 +230,7 @@
 
 .notifi-header {
     background-color: rgb(255, 255, 255);
+    border-radius: 5px 5px 0 0;
     height: 40px;
 }
 
@@ -212,6 +240,7 @@
     line-height: 40px;
     font-family: 'Exo 2', sans-serif;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .notifi-list {
@@ -269,6 +298,8 @@
     margin-top: -17px;
     background-color: rgb(255, 255, 255);
     height: 40px;
+    text-align: center;
+    border-radius:0 0 5px 5px;
 }
 
 .notifi-all > p{
@@ -403,7 +434,7 @@
 .form-link-facebook{
     background-color: rgb(12, 113, 255);
     color: white;
-    margin-left: 30px;
+    margin-left: 60px;
 }
 
 .fa-facebook{
@@ -413,7 +444,7 @@
 .form-link-google{
     background-color: white;
     color: var(--blackBackgroud-color);
-    margin-right: 30px;
+    margin-right: 60px;
 }
 
 .fa-google{
@@ -494,3 +525,113 @@
     display: none;
 }
 
+/* --Search */
+.search{
+    display: none;
+}
+
+.search-fa-magnifying-glass:hover .search{
+    display: block;
+}
+
+.search-form::before{
+    content: "";
+    position: absolute;
+    border: 20px solid;
+    border-color: transparent transparent var(--icon-color) transparent;
+    right: 5px;
+    top: -40px;
+}
+
+.search-form::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -40px;
+    width: 80px;
+    height: 40px;
+}
+
+.search-form{
+    width: 280px;
+    height: 90px;
+    background-color: #ffffff;
+    position: absolute;
+    margin: 31px 0 0 -240px;
+    border-radius: 5px;
+    border: black solid 1px;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    animation: GrowZoom ease 0.25s;
+    --grow-from: 0;
+    --grow-to: 1;
+    transform-origin: calc(100% - 10px) top;
+}
+
+.search-form-item {
+    display: flex;
+    height: 40px;
+    width: 180px;
+    font-size: 15px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.icon-search{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    float: right;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-search>.fa-magnifying-glass {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    padding: 0;
+    margin: auto;
+}
+
+/* ---Content----- */
+.slide:hover .button-slide{
+    display: block;
+    transition: 0.5s linear;
+}
+
+.interface-img{
+    display: none;
+    transition: opacity 1.5s;
+    opacity: 0;
+}
+
+.interface-img.active {
+    display: block;
+    opacity: 1;
+  }
+
+.img-background{
+    width: 100%;
+    margin: 2px 0 0 0;
+}
+
+.button-slide{
+    position: relative;
+    margin-top: -280px;
+    color: var(--main-color);
+    font-size: 30px;
+    display: none;
+    opacity: 0.6;
+}
+
+.button-slide>.fa-chevron-left{
+    margin-left: 20px;
+}
+
+.button-slide>.fa-chevron-right{
+    float: right;
+    margin-right: 20px;
+}

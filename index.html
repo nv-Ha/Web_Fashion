@@ -13,40 +13,42 @@
     <div class="main">
         <!-- --- -->
         <header class="header">
+            <div class="slogan">
+                <p>Welcome to the world of fashion shopping</p>
+            </div>
+            <div class="img-logo">
+                <img class="logo" src="/Css/Image/logo.png">
+            </div>
             <div class="grid">
                 <!-- --Head-1 -->
                 <nav class="navgation">
-                    <ul class="navText">
-                        <li class="navText-head">Free shipping with order over $65</li>
-                    </ul>
-    
-                    <ul class="navText">
-                        <li class="navText-head navText--weigh navText--line btn-signup">Sign Up</li>
-                        <li class="navText-head navText--weigh btn-signin">Sign In</li>
-                    </ul>
+                    <!-- .... -->
                 </nav>
                 <!-- --Head-2 -->
                 <nav class="navBar">
-                    <img class="img-logo" src="/Css/Image/logo.png">
                     <ul class="navList">
-                        <li class="navList-item">Introduce</li>
-                        <li class="navList-item">Contact</li>
-                        <li class="navList-item">Trademark</li>
-                        <li class="navList-item">News & Events</li>
-                        <li class="navList-item">Collection</li>
-                        <li class="navList-item">Store
-                            <i class="fa-solid fa-chevron-down store-show">
-                                <div class="store-more">
-                                    <ul class="store-list">
-                                        <li class="store-item">Clothes</li>
-                                        <li class="store-item">Shoes</li>
-                                        <li class="store-item">Accessory</li>
-                                        <li class="store-item">Bags and Backpacks</li>
-                                    </ul>
-                                </div>
-                            </i>
-                        </li>
-                        <i class="fa-solid fa-bell notifi-show">
+                        <div class="navList-style">
+                            <li class="navList-item">Introduce</li>
+                            <li class="navList-item">Contact</li>
+                            <li class="navList-item">Trademark</li>
+                            <li class="navList-item">News & Events</li>
+                            <li class="navList-item">Collection</li>
+                            <li class="navList-item">Store
+                                <i class="fa-solid fa-chevron-down store-show">
+                                    <div class="store-more">
+                                        <ul class="store-list">
+                                            <li class="store-item">Clothes</li>
+                                            <li class="store-item">Shoes</li>
+                                            <li class="store-item">Accessory</li>
+                                            <li class="store-item">Bags and Backpacks</li>
+                                        </ul>
+                                    </div>
+                                </i>
+                            </li>
+                        </div>
+                        <!-- ------------ -->
+                        <div class="navList-style">
+                            <i class="fa-solid fa-bell notifi-show">
                             <div class="notifi">
                                 <header class="notifi-header">
                                     <p>New Notification</p>
@@ -108,14 +110,43 @@
                                 </footer>
                             </div>
                         </i>
+                        <i class="fa-solid fa-user btn-signin"></i>
                         <i class="fa-solid fa-bag-shopping"></i>
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <!-- --Search -->
+                        <i class="fa-solid fa-magnifying-glass search-fa-magnifying-glass">
+                            <div class="search">
+                                <div class="search-form">
+                                <input type="search" placeholder="Search ..." class="search-form-item">
+                                <div class="icon-search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </div>
+                        </div>
+                        </i>
+                    </div>
+                   
                     </ul>
                 </nav>
             </div>
         </header>
-        <!-- --- -->
-        <div></div>
+        <!-- -Ccontent- -->
+        <div class="slide">
+            <div class="main-interface">
+                <div class="interface-img">
+                    <img src="/Css/Image/background_1.jpg" alt="" class="img-background">
+                </div>
+                <div class="interface-img">
+                    <img src="/Css/Image/background_2.jpg" alt="" class="img-background">
+                </div>
+                <div class="interface-img">
+                    <img src="/Css/Image/background_3.jpg" alt="" class="img-background">
+                </div>
+            </div>
+            <div class="button-slide">
+                <i onclick="plusDivs(1)"  class="fa-solid fa-chevron-left"></i>
+                <i onclick="plusDivs(-1)" class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
         <footer></footer>
 
         <!-- --Modal -->

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Exo:wght@200;300&family=Kanit:wght@100&display=swap');
+
+*{
+    /* margin: 0; */
+    box-sizing: inherit;
+    font-family: 'Exo 2', sans-serif;
+}
+
+:root{
+    --main-color: rgb(255, 102, 0);
+    --blackBackgroud-color: rgb(54, 52, 52);
+}
+
+html{
+    line-height: 16px;
+    font-family: 'Exo 2', sans-serif;
+    box-sizing: border-box;
+    font-size: 17px;
+}
+
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.drid-fullWidth{
+    width: 100%;
+}
+
+.grid-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    animation: ShowOff linear 0.25s ;
+    display: none;
+}
+
+@keyframes ShowOff {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes GrowZoom{
+    from{
+        transform: scale(var(--grow-from));
+    }
+    to{
+        transform: scale(var(--grow-to));
+    }
+}

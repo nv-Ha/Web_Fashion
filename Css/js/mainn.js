@@ -80,14 +80,47 @@ function showDivs(n) {
 // Tự động chuyển slide sau một khoảng thời gian
 function autoSlide() {
   plusDivs(1);
-  setTimeout(autoSlide, 3000); // 2000 milliseconds (2 seconds) per slide
+  setTimeout(autoSlide, 3500); // 2000 milliseconds (2 seconds) per slide
 }
 
 // Gọi hàm autoSlide để bắt đầu tự động chuyển động
 autoSlide();
+
+// ----------------
+const $ = document.querySelector.bind(document)
+const $$ = document.querySelectorAll.bind(document)
+
+const productItem = $$('.product-item')
+const productContent = $$('.product-content')
+
+productItem.forEach((item, index)=>{
+  const content = productContent[index]
+  item.onclick = function(){
+
+    $('.product-item.active').classList.remove('active')
+    $('.product-content.active').classList.remove('active')
+
+    this.classList.add('active')
+    content.classList.add('active')
+  }
+})
   
-  
-  
+
+// Lấy tất cả các phần tử có lớp "circle-color-item"
+var colorItems = document.querySelectorAll('.circle-color-item');
+
+// Lặp qua từng phần tử và thêm sự kiện click
+colorItems.forEach(function(item) {
+  item.onclick = function() {
+      // Loại bỏ border của tất cả các phần tử
+      colorItems.forEach(function(item) {
+          item.classList.remove('selected');
+      });
+
+      // Thêm border vào phần tử được nhấp vào
+      this.classList.add('selected');
+  };
+});
   
   
   

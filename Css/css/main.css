@@ -4,7 +4,7 @@
 /* --Head-1  */
 .slogan{
     height: 35px;
-    background-color: #F6F1E9;
+    background-color: var(--main-color);
     display: flex;
 }
 .slogan>p{
@@ -642,7 +642,7 @@
 .intro{
     display: flex;
     align-items: center;
-    background-color: #F6F1E9;
+    background-color: #A1CCD1;
     margin: -20px 0 0 0;
     height: 440px;
 }
@@ -650,6 +650,7 @@
 .intro-logo{
     margin-left: 24%;
     margin-right: 40px;
+    
 }
 
 
@@ -839,11 +840,11 @@
 
 /* --policy */
 .policy{
-    background-color: #F8F8F8;
+    background-color: #A1CCD1;
     height: 350px;
     margin-top: 480px;
     display: flex;
-
+    color: white;
 }
 
 .policy-list{
@@ -860,17 +861,20 @@
 .policy-list-item > #Layer_1{
     width: 50px;
     height: 50px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(0%) hue-rotate(160deg) brightness(107%) contrast(101%);
 }
 
 .policy-list-item > #Capa_1{
     width: 50px;
     height: 50px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(0%) hue-rotate(160deg) brightness(107%) contrast(101%);
 }
   
 
 .policy-list-item > #Layer_2{
     width: 50px;
     height: 50px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(0%) hue-rotate(160deg) brightness(107%) contrast(101%);
 }
 
 .policy-text:nth-child(2){
@@ -893,4 +897,58 @@
     background-color: white;
     margin-top: 20px;
     cursor: pointer;
+}
+
+/* ---Sale */
+.sale{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.sale-list{
+    display: flex;
+    width: 50vw;
+    background-color: var(--main-color);
+    height: 415px;
+    position: relative;
+}
+
+.sale-item{
+    height: 100%;
+}
+.sale-item-store{
+    filter: grayscale(90%);
+}
+
+.sale-item-store:hover{
+    filter: none;
+    transition: 0.5s ease;
+}
+
+.sale-item-modal{
+    position: absolute;
+    width: 340px;
+    height: 500px; 
+    margin-top: -85px; 
+    right: 27vw;
+}
+
+.sale-item-logo{
+    filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(3373%) hue-rotate(357deg) brightness(93%) contrast(96%);
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 8vw;
+    opacity: 0.65;
+    top: 3vw;
+}
+
+.sale-list:hover .sale-item-modal{
+    right: 0;
+    transition: right 1s ease;
+}
+
+.sale-list:hover .sale-item-logo{
+    opacity: 0;
+    transition: 0.5s ease;
 }

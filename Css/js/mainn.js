@@ -56,6 +56,12 @@ modal.addEventListener('click', (event) => {
 // Hiển thị modal ban đầu là ẩn
 modal.style.display = 'none';
 
+
+// Bell
+// var notifi = documentq.querySelector('.fa-bell')
+
+// notifi.addEventListener()
+
 // ---slide
 var slideIndex = 0; // Bắt đầu với slideIndex = 0
 showDivs(slideIndex);
@@ -141,7 +147,7 @@ buttonsale.addEventListener("click", () => {
   textsale.style.transition = "opacity 0.5s ease";
 
   moresale.style.opacity = "1"; 
-  moresale.style.transition = "opacity 1s ease";
+  moresale.style.transition = "opacity 2s ease";
   
   setTimeout(()=>{
     logosale.style.display = "none";
@@ -149,3 +155,25 @@ buttonsale.addEventListener("click", () => {
     moresale.style.display = "block";
   },500)
 });
+
+const btnListStore = document.querySelector(".btn-list-new-store");
+const imgStore = document.querySelector(".sale-item-store-show");
+const saleStore = document.querySelector(".sale-new-store");
+const saleStoreShow = document.querySelector(".sale-new-store-show");
+
+btnListStore.addEventListener("click", ()=>{
+  saleStore.style.opacity = "0";
+  saleStore.style.transition = "opacity 0.15s ease"
+
+  imgStore.style.opacity  = "1";
+  imgStore.style.transition = "opacity 0.15s ease"
+
+  saleStoreShow.style.opacity = "1";
+  saleStoreShow.transition = "opacity 0.15s ease"
+
+  setTimeout(()=>{
+    saleStore.style.display = "none";
+    imgStore.display = "block";
+    saleStoreShow.style.display = "block";
+  },0)
+})

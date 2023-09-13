@@ -4,11 +4,12 @@
 /* --Head-1  */
 .slogan{
     height: 35px;
-    background-color: var(--main-color);
+    /* background-color: var(--main-color); */
     display: flex;
+    background-color: black;
 }
 .slogan>p{
-    color: rgba(0, 0, 0, 0.85);
+    color: rgba(255, 254, 254, 0.85);
     margin: auto;
     font-size: 15px;
 }
@@ -642,7 +643,7 @@
 .intro{
     display: flex;
     align-items: center;
-    background-color: #A1CCD1;
+    background-color: #9BCDD2;
     margin: -20px 0 0 0;
     height: 440px;
 }
@@ -654,7 +655,7 @@
 }
 
 
-.intro-logo:hover .intro-logo-item-none{
+/* .intro-logo:hover .intro-logo-item-none{
     opacity: 1;
     transition: linear 0.2s;
 }
@@ -664,12 +665,12 @@
    position: absolute;
    margin-left: -250px;
    opacity: 0;
-}
+} */
 
 .intro-logo-item{
     width: 250px;
     height: 250px;
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .intro-text-item{
@@ -840,11 +841,11 @@
 
 /* --policy */
 .policy{
-    background-color: #A1CCD1;
+    background-color: #9BCDD2;
     height: 350px;
     margin-top: 480px;
     display: flex;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .policy-list{
@@ -861,20 +862,20 @@
 .policy-list-item > #Layer_1{
     width: 50px;
     height: 50px;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(0%) hue-rotate(160deg) brightness(107%) contrast(101%);
+    /* filter: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(0%) hue-rotate(160deg) brightness(107%) contrast(101%); */
 }
 
 .policy-list-item > #Capa_1{
     width: 50px;
     height: 50px;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(0%) hue-rotate(160deg) brightness(107%) contrast(101%);
+    /* filter: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(0%) hue-rotate(160deg) brightness(107%) contrast(101%); */
 }
   
 
 .policy-list-item > #Layer_2{
     width: 50px;
     height: 50px;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(0%) hue-rotate(160deg) brightness(107%) contrast(101%);
+    /* filter: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(0%) hue-rotate(160deg) brightness(107%) contrast(101%); */
 }
 
 .policy-text:nth-child(2){
@@ -901,35 +902,39 @@
 
 /* ---Sale */
 .sale{
-    display: grid;
-    grid-template-columns: auto auto;
+    /* display: grid;
+    grid-template-columns: auto auto; */
+    display: flex;
+    flex-direction: row;
 }
 
 .sale-list{
-    display: flex;
-    width: 50vw;
+    flex: 1;
     background-color: var(--main-color);
-    height: 415px;
-    position: relative;
+    /* height: 100vh; */
+    position: relative; 
+    z-index: 10;
 }
 
 .sale-item{
     height: 100%;
 }
 .sale-item-store{
+    width: 50vw;
     filter: grayscale(90%);
 }
 
 .sale-item-store:hover{
     filter: none;
-    transition: 0.5s ease;
+    transition: 0.35s ease;
 }
 
 .sale-item-modal{
     position: absolute;
     width: 340px;
     height: 500px; 
-    margin-top: -85px; 
+    /* margin-top: -85px;  */
+    bottom: 0;
     right: 27vw;
 }
 
@@ -943,7 +948,7 @@
     top: 3vw;
 }
 
-.sale-list:hover .sale-item-modal{
+/* .sale-list:hover .sale-item-modal{
     right: 0;
     transition: right 1s ease;
 }
@@ -951,4 +956,64 @@
 .sale-list:hover .sale-item-logo{
     opacity: 0;
     transition: 0.5s ease;
+}
+
+.sale-list:hover .sale-text{
+    opacity: 0;
+    transition: 0.5s ease;
+} */
+
+.sale-text{
+    margin: 100px 0 0 420px;
+    position: relative;
+    z-index: 3;
+    letter-spacing: 0.2px;
+}
+.dress-text-1{
+    font-size: 25px;
+    margin-top: 30px;
+    font-weight: bold;
+    /* color: white; */
+}
+
+.dress-icon-sale{
+    width: 60px;
+}
+
+.sale-more-list{
+    opacity: 0;
+}
+
+.sale-more {
+    width: 22vw;
+    position: absolute;
+    height: 0;
+    border-bottom: 420px solid #dffbfe;
+    transform: rotate(180deg);
+    border-left: 60px solid transparent;
+    left: 0px; /* Đặt vị trí tương đối từ bên trái */
+    top: 0px; /* Đặt vị trí tương đối từ trên cùng */
+}
+
+.sale-more-line{
+    position: absolute;
+    width: 19vw;
+    height: 360px;
+    clip-path: polygon(0 0, 99% 0, 84.5% 100%, 0% 100%);
+    background-color: #dffbfe;
+    border: rgb(0, 0, 0, 0.5) solid 5px;
+    border-right-color: transparent;
+    transform: rotate(180deg);
+    z-index: -1;
+    margin: 1.5vw 0 0 -3.1575vw;
+}
+
+.sale-more-bg {
+    width: 27vw;
+    position: absolute;
+    border-bottom: 300px solid #9BCDD2;
+    transform: rotate(180deg);
+    border-left: 45px solid transparent;
+    left: 0; 
+    top: 3.2vw; 
 }

@@ -123,4 +123,29 @@ colorItems.forEach(function(item) {
 });
   
   
+// ---Sale
+const buttonsale = document.querySelector(".btn-sale-more");
+const modalsale = document.querySelector(".sale-item-modal");
+const logosale = document.querySelector(".sale-item-logo");
+const textsale = document.querySelector(".sale-text");
+const moresale = document.querySelector(".sale-more-list");
+
+buttonsale.addEventListener("click", () => {
+  modalsale.style.right = "0"; 
+  modalsale.style.transition = "right 1s ease";
+
+  logosale.style.opacity = "0"; 
+  logosale.style.transition = "opacity 0.5s ease";
+
+  textsale.style.opacity = "0"; 
+  textsale.style.transition = "opacity 0.5s ease";
+
+  moresale.style.opacity = "1"; 
+  moresale.style.transition = "opacity 1s ease";
   
+  setTimeout(()=>{
+    logosale.style.display = "none";
+    textsale.style.display = "none";
+    moresale.style.display = "block";
+  },500)
+});

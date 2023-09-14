@@ -731,7 +731,7 @@
 .product-list>p{
     text-align: center;
     margin-top: 100px;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: bold;
     letter-spacing: 1px;
 }
@@ -997,6 +997,7 @@
     letter-spacing: 1px;
     margin-top: 1vw;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .btn-sale-more:hover{
@@ -1095,6 +1096,7 @@
     font-size: 15px;
     font-weight: bold;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 
 .sale-more-bg-list>button:hover{
@@ -1146,6 +1148,7 @@
 
 .btn-list-new-store{
     width: 180px;
+    cursor: pointer;
     height: 40px;
     border: 1px solid white;
     color: white;
@@ -1206,6 +1209,7 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   margin-left: 2vw;
+  cursor: pointer;
 }
 
 .btn-store-show:after {
@@ -1293,4 +1297,96 @@
     height: 50px;
     line-height: 20px;
   }
+}
+
+
+/* --Brand */
+.brand{
+    margin-top: 7vw;
+}
+
+.brand-item{
+    display: block;
+    text-align: center;
+}
+
+.brand-item>p{
+    font-size: 40px;
+}
+
+.brand-item:nth-child(2){
+    margin-left: -7vw;
+}
+
+.img-brand{
+    width: 7vw;
+    height: 7vw;
+    object-fit: contain;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 3vw 0 0 6.5vw;
+}
+
+.brand-line{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(0, 0, 0, 0.15);
+    margin-top: 5vw;
+}
+
+.store-us-list>p:nth-child(1){
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.store-us-list{
+    display: block;
+    margin: 4vw auto;
+    text-align: center;
+}
+
+.store-us-img{
+    width: 13vw;
+    height: 13vw;
+    margin: 0.5vw 0 0 0.5vw;
+}
+
+/* marquee */
+.marquee{
+    /* top: -3vw; */
+    height: 6vh;
+    bottom: 4vw;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #fefefe;
+    color: #333;
+}
+
+.marquee>p{
+    font-size: 30px;
+    line-height: -0vw;
+    position: absolute;
+    transform: translateX(100%);
+    animation: marquee linear 15s infinite;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+@keyframes marquee{
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+
+}
+
+/* footer */
+.footer{
+    height: 25vw;
+    background-color: #000000;
 }

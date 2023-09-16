@@ -177,3 +177,13 @@ btnListStore.addEventListener("click", ()=>{
     saleStoreShow.style.display = "block";
   },0)
 })
+
+// ----Contact
+const btnContact = document.querySelector('.btn-contact-footer')
+const contactRemove = document.querySelector('.footer-contact-item-remove')
+const contactShow = document.querySelector('.contact-follow')
+
+btnContact.addEventListener('click', ()=>{
+    contactRemove.style.display = 'none';
+    contactShow.style.display = 'block';
+})
